@@ -14,7 +14,7 @@ Building for production:
 
 ```sh
 cd src/http/any-catchall
-remix build
+npm run build
 ```
 
 Deploying
