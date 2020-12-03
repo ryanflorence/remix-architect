@@ -1,0 +1,41 @@
+{
+  "name": "remix-nikes-architect",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "tsc -b && find ./node_modules/* -mtime +10950 -exec touch {} \\;",
+    "start": "npm run css:setup && concurrently \"remix run\" \"tsc -b -w --preserveWatchOutput\"",
+    "build": "npm run css:build && remix build && tsc -b",
+    "css:build": "postcss styles --base styles --dir app/ --env production",
+    "css:setup": "postcss styles --base styles --dir app/"
+  },
+  "dependencies": {
+    "@architect/functions": "^3.13.8",
+    "@remix-run/cli": "^0.8.0",
+    "@remix-run/core": "^0.8.0",
+    "@remix-run/data": "^0.8.0",
+    "@remix-run/react": "^0.8.0",
+    "@tailwindcss/forms": "^0.2.1",
+    "@types/lodash": "^4.14.165",
+    "atob": "^2.1.2",
+    "autoprefixer": "^10.0.4",
+    "aws-sdk": "^2.799.0",
+    "concurrently": "^5.3.0",
+    "history": "^5.0.0",
+    "lodash": "^4.17.20",
+    "postcss": "^8.1.10",
+    "postcss-cli": "^8.3.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router": "^6.0.0-beta.0",
+    "react-router-dom": "^6.0.0-beta.0",
+    "sift": "^13.4.0",
+    "tailwindcss": "^2.0.1",
+    "use-throttle": "0.0.3"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
+    "typescript": "^4.1.0"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "extends": "../shared-tsconfig.json",
+  "compilerOptions": {
+    // Remix compiler takes care of this
+    "noEmit": true
+  }
+}
