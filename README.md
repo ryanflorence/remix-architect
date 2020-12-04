@@ -1,6 +1,6 @@
 # Remix Architect Experiment
 
-Running locally:
+## Running locally:
 
 ```sh
 arc sandbox
@@ -10,14 +10,18 @@ cd src/http/any-catchall
 npm run start
 ```
 
-Building for production:
+Then open up [http://localhost:3333](http://localhost:3333) (not 3334, that's just the asset server).
+
+## Deploying:
+
+First build it:
 
 ```sh
 cd src/http/any-catchall
 npm run build
 ```
 
-Deploying
+And then deploy it:
 
 ```sh
 # from the root of the project
